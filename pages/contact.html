@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Event Calendar Contact</title>
+        <link rel="stylesheet" type="text/css" href="../dist/style/screen.css">
+        <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <div class="header_top">
+                <img class="header_top_image" src="../dist/media/header.jpg">
+            </div>
+            <div class="header_bottom">
+                <ul>
+                    <li><a href="../index.html">Event Calendar</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contactForm">
+            <h2>Contact us</h2>
+            <form class="form">
+                <label for="Name">Name: </label>
+                <input id="Name" class="contactFormNameInput" type="text" placeholder="Name" maxlength="30">
+                <label for="Comment">Your comment: </label>
+                <textarea id="Comment" placeholder="Please insert your comment..." rows="5" cols="30" maxlength="1000"></textarea>
+                <input type="button" class="submitButton" value="Send">
+            </form>
+        </div>
+
+        <div class="comments">
+            <h2>Previous comments</h2>
+            <div class="commentsWrapper">
+                <!--<div class="loader"></div>-->
+            </div>
+        </div>
+
+        <script src="../script/contactScript.js"></script>
+    </body>
+</html>
