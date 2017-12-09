@@ -1,11 +1,10 @@
 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 var calendarMonth;
 var calendarYear;
-var holder = document.querySelector('.eventsHolder');
-var toggle = document.querySelector('.toggleBelgium');
-var arrowLeftHtml = document.querySelector('.arrow-left');
-var currentMonth = new Date().getMonth();
-var currentYear = new Date().getFullYear();
+var holder ;
+var arrowLeftHtml;
+var currentMonth;
+var currentYear;
 var hardcodedEvents = {
     "_embedded": {
         "events": [
@@ -6258,19 +6257,9 @@ var hardcodedEvents = {
     }
 };
 var previousSelectedDay;
-
-console.log(currentMonth);
-function getEvents(){
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function(){
-      if(this.readyState == 4 && this.status == 200){
-          var result = JSON.parse(xhttp.responseText);
-          console.log(result);
-      }
-    };
-    xhttp.open("GET","https://app.ticketmaster.com/discovery/v2/events.json?apikey=3VaDpKjcG6YEr85SATQCB3zfvKu4St6C", true);
-    xhttp.send();
-}
+var calendarHolder;
+var calendarHeader;
+var calendarDays;
 
 function getEventsByMonth(month, page, year){
     previousSelectedDay = null;
@@ -6343,48 +6332,34 @@ function getEventsByMonth(month, page, year){
             break;
     }
     var url;
-    // if(toggle.checked == true){
-    //     url = "https://app.ticketmaster.com/discovery/v2/events.json?startDateTime="+startDate+"&endDateTime="+endDate+"&countryCode=be";
-    // }else{
-    //     url = "https://app.ticketmaster.com/discovery/v2/events.json?startDateTime="+startDate+"&endDateTime="+endDate;
-    // }
     url = "https://app.ticketmaster.com/discovery/v2/events.json?startDateTime="+startDate+"&endDateTime="+endDate+"&countryCode=be";
 
     if(page == -1){
        holder.innerHTML = "";
+       createLoader();
     }else{
         url += "&page="+page;
     }
     url += "&apikey=3VaDpKjcG6YEr85SATQCB3zfvKu4St6C";
-    console.log(url);
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
             var result = JSON.parse(xhttp.responseText);
-            //console.log(result);
-            //console.log(result.page.totalPages);
-            //insert try becouse last page of events may contain no _embedded.events, just events
-            console.log(result._embedded.events);
             try {
                 displayEvents(result._embedded.events);
                 if (result.page.totalPages == result.page.number) {
-                    console.log("done to page " + result.page.number);
+                    removeLoader();
                 } else {
-                    console.log("done to page " + result.page.number);
                     getEventsByMonth(month, result.page.number + 1, year);
                 }
             } catch(ex){
-                //try becouse last page of events may contain no events
-                try{
-                    displayEvents(result);
-                }catch(ex){}
+                removeLoader();
             }
 
         }
     };
     xhttp.open("GET",url, true);
     xhttp.send();
-    // displayEvents(hardcodedEvents._embedded.events);
 }
 
 function getEventsByDate(page, date){
@@ -6405,40 +6380,26 @@ function getEventsByDate(page, date){
         var endDate = clickedCell.dataset.enddate;
 
         var url;
-        // if (toggle.checked == true) {
-        //     url = "https://app.ticketmaster.com/discovery/v2/events.json?startDateTime=" + startDate + "&endDateTime=" + endDate + "&countryCode=be";
-        // } else {
-        //     url = "https://app.ticketmaster.com/discovery/v2/events.json?startDateTime=" + startDate + "&endDateTime=" + endDate;
-        // }
         url = "https://app.ticketmaster.com/discovery/v2/events.json?startDateTime=" + startDate + "&endDateTime=" + endDate + "&countryCode=be";
         if (page == -1) {
             holder.innerHTML = "";
+            createLoader();
         } else {
             url += "&page=" + page;
         }
         url += "&apikey=3VaDpKjcG6YEr85SATQCB3zfvKu4St6C";
-        console.log(url);
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 var result = JSON.parse(xhttp.responseText);
-                //console.log(result);
-                //console.log(result.page.totalPages);
-                //insert try becouse last page of events may contain no _embedded.events, just events
                 try {
                     displayEvents(result._embedded.events);
                     if (result.page.totalPages == result.page.number) {
-                        console.log("done to page " + result.page.number);
                     } else {
-                        console.log("done to page " + result.page.number);
                         getEventsByDate(result.page.number + 1, date);
                     }
                 } catch (ex) {
-                    //try becouse last page of events may contain no events
-                    try {
-                        displayEvents(result);
-                    } catch (ex) {
-                    }
+                   removeLoader();
                 }
 
             }
@@ -6450,16 +6411,10 @@ function getEventsByDate(page, date){
 }
 
 function displayEvents(events) {
-    //console.log(events);
     for(var i = 0, l = events.length; i<l; i++){
-        //console.log(events[i].name);
         var currentEvent = events[i];
         var div = document.createElement('div');
         div.classList.add('event');
-        try{
-            var url = currentEvent.url.toString();
-            div.setAttribute('onclick', 'showWebPage('+url+')');
-        }catch(ex){}
 
         holder.append(div);
 
@@ -6494,17 +6449,6 @@ function displayEvents(events) {
         }
         div.append(cityP);
 
-        // if(toggle.checked == false){
-        //     var countryP = document.createElement('p');
-        //     countryP.classList.add('eventCountry');
-        //     try{
-        //         countryP.innerHTML = "Country: " + venue.country.countryCode;
-        //     }catch (ex){
-        //         countryP.innerHTML = "Country unknown";
-        //     }
-        //     div.append(countryP);
-        // }
-
         var venueP = document.createElement('p');
         venueP.classList.add('eventVenue');
         try {
@@ -6521,10 +6465,6 @@ function displayEvents(events) {
     }
 }
 
-function showWebPage(url){
-    console.log(url);
-}
-
 function clearTable(table){
     var rows = table.rows;
     var i = rows.length;
@@ -6537,10 +6477,9 @@ function fillupCallendar(month, year){
     var daysInMonth = getDaysInMonth(month, year);
     var stringMonthNumber;
     var days = 1;
-    var table = document.querySelector('.calendarDays');
     var row;
     var cell;
-    clearTable(table);
+    clearTable(calendarDays);
     if(month+1 < 10){
         stringMonthNumber = "0"+(month+1).toString();
     }else{
@@ -6549,11 +6488,9 @@ function fillupCallendar(month, year){
     var stringDate = year.toString() + "-" + stringMonthNumber +"-"+"01";
     var firstDayDate = new Date(stringDate);
     var firstDay = firstDayDate.getDay();
-    console.log(firstDay);
     if(firstDay != 1){
         if(firstDay !=0) {
-            console.log("firstday is not 1");
-            row = table.insertRow();
+            row = calendarDays.insertRow();
             for (var i = 1; i < firstDay; i++) {
                 cell = row.insertCell();
             }
@@ -6563,7 +6500,7 @@ function fillupCallendar(month, year){
                 days += 1;
             }
         }else{
-            row = table.insertRow();
+            row = calendarDays.insertRow();
             for(i=0;i<6;i++){
                 cell = row.insertCell();
             }
@@ -6575,7 +6512,7 @@ function fillupCallendar(month, year){
     }
 
     while(days<daysInMonth+1){
-        row = table.insertRow();
+        row = calendarDays.insertRow();
         for( i = 1; i<8; i++){
             if(days<daysInMonth+1){
                 fillCalendarCell(cell, days, row);
@@ -6591,14 +6528,17 @@ function fillupCallendar(month, year){
     if((months.indexOf(calendarMonth.innerHTML) == currentMonth) && currentYear == calendarYear.innerHTML){
         arrowLeftHtml.setAttribute('onclick','');
         arrowLeftHtml.style.opacity = 0.3;
+        arrowLeftHtml.classList.remove('arrowsHover');
 
     }else{
         arrowLeftHtml.setAttribute('onclick','arrowLeft()');
         arrowLeftHtml.style.opacity = 1;
+        arrowLeftHtml.classList.add('arrowsHover');
     }
 }
 
 function fillCalendarCell(cell, days, row){
+    var date = new Date();
     cell = row.insertCell();
     cell.innerHTML = days;
     if (days < 10){
@@ -6606,16 +6546,18 @@ function fillCalendarCell(cell, days, row){
     }else{
         datadate = days;
     }
-    var datamonth = parseInt(months.indexOf(calendarMonth.innerHTML)+1);
-    if(datamonth<10){
-        datamonth = "0" + parseInt(months.indexOf(calendarMonth.innerHTML)+1);
+    if((days>=date.getDate()) || (date.getMonth() !=months.indexOf(calendarMonth.innerHTML))){
+        var datamonth = parseInt(months.indexOf(calendarMonth.innerHTML) + 1);
+        if (datamonth < 10) {
+            datamonth = "0" + parseInt(months.indexOf(calendarMonth.innerHTML) + 1);
+        }
+        cell.dataset.startdate = calendarYear.innerHTML + "-" + datamonth + "-" + datadate + "T00:00:01Z";
+        cell.dataset.enddate = calendarYear.innerHTML + "-" + datamonth + "-" + datadate + "T23:59:59Z";
+        var stringclass = "date-" + days;
+        cell.classList.add(stringclass);
+        cell.classList.add("cellDate");
+        cell.setAttribute('onclick', 'getEventsByDate(-1, ' + days + ')')
     }
-    cell.dataset.startdate = calendarYear.innerHTML + "-" + datamonth + "-" + datadate + "T00:00:01Z";
-    cell.dataset.enddate = calendarYear.innerHTML + "-" + datamonth + "-" + datadate + "T23:59:59Z";
-    var stringclass = "date-"+days;
-    cell.classList.add(stringclass);
-    cell.classList.add("cellDate");
-    cell.setAttribute('onclick', 'getEventsByDate(-1, '+days+')')
 }
 
 function arrowLeft(){
@@ -6679,15 +6621,32 @@ function getDaysInMonth(month, year){
     }
 }
 
-// function toggleBelgium(){
-//     getEventsByMonth(calendarMonth.innerHTML, -1, parseInt(calendarYear.innerHTML));
-//
-// }
+function createLoader(){
+    calendarHeader.style.display = "none";
+    calendarDays.style.display = "none";
+    var div = document.createElement('div');
+    div.classList.add('loader');
+    calendarHolder.append(div);
+}
+
+function removeLoader(){
+    var loader = document.querySelector('.loader');
+    calendarHolder.removeChild(loader);
+    calendarHeader.style.display = "block";
+    calendarDays.style.display = "table";
+}
 
 document.addEventListener('DOMContentLoaded',function(){
 
+    holder = document.querySelector('.eventsHolder');
+    arrowLeftHtml = document.querySelector('.arrow-left');
+    currentMonth = new Date().getMonth();
+    currentYear = new Date().getFullYear();
     calendarMonth = document.querySelector('.calendarMonth');
     calendarYear = document.querySelector('.calendarYear');
+    calendarHolder = document.querySelector('.calendarHolder');
+    calendarHeader = document.querySelector('.calendarHeader');
+    calendarDays = document.querySelector('.calendarDays');
     calendarMonth.innerHTML = months[currentMonth];
     calendarYear.innerHTML = currentYear.toString();
     fillupCallendar(currentMonth, currentYear);

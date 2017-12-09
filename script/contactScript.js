@@ -4,25 +4,18 @@ var formholder;
 var submitFormButton;
 
 function submitForm(){
-    console.log("form submitted");
     var inputName = document.getElementById("Name");
-    inputName = inputName.value;
+    var inputNameValue = inputName.value;
     var inputComment = document.getElementById("Comment");
-    inputComment = inputComment.value;
-    if(inputName != "" && inputComment != ""){
-        form.style.display = "none";
-        var div = document.createElement('div');
-        div.classList.add('loader');
-        formholder.append(div);
-        //var data = {};
-        //data["Name"] = inputName;
-        //data["Comment"] = inputComment;
-        //data = JSON.stringify(data);
-        var data = '{"Name":"'+inputName+'", "Comment":"'+inputComment+'"}';
-        console.log(data);
+    var inputCommentValue = inputComment.value;
+    if(inputNameValue != "" && inputCommentValue != ""){
+        inputName.value = "";
+        inputComment.value = "";
+        var data = '{"Name":"'+inputNameValue+'", "Comment":"'+inputCommentValue+'"}';
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
+
                 loadPreviousComments();
             }
         }
@@ -34,11 +27,11 @@ function submitForm(){
 }
 
 function loadPreviousComments(){
+    createLoader();
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200) {
             var result = JSON.parse(xhttp.responseText);
-            console.log(result);
             displayComments(result);
         }
     };
@@ -67,10 +60,21 @@ function displayComments(comments){
         div.append(comment);
     }
     try {
-        var loader = document.querySelector('.loader');
-        formholder.removeChild(loader);
-        form.style.display = "inline-block";
+        removeLoader()
     }catch(ex){}
+}
+
+function createLoader() {
+    var div = document.createElement('div');
+    div.classList.add('loader');
+    formholder.append(div);
+    form.style.display = "none";
+}
+
+function removeLoader(){
+    var loader = document.querySelector('.loader');
+    formholder.removeChild(loader);
+    form.style.display = "inline-block";
 }
 
 document.addEventListener('DOMContentLoaded',function(){
