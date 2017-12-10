@@ -17,18 +17,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="62" lean-forward="false" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+            <state relative-caret-position="272">
+              <caret line="16" column="61" lean-forward="false" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="contact.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="28" column="70" lean-forward="false" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+            <state relative-caret-position="184">
+              <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -37,8 +37,8 @@
       <file leaf-file-name="screen.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/style/screen.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="78" column="12" lean-forward="false" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="12" />
+            <state relative-caret-position="170">
+              <caret line="184" column="16" lean-forward="true" selection-start-line="184" selection-start-column="16" selection-end-line="184" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -47,14 +47,13 @@
       <file leaf-file-name="homescript.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/homescript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="6636" column="1" lean-forward="true" selection-start-line="6636" selection-start-column="1" selection-end-line="6636" selection-end-column="1" />
+            <state relative-caret-position="357">
+              <caret line="6464" column="40" lean-forward="false" selection-start-line="6464" selection-start-column="40" selection-end-line="6464" selection-end-column="40" />
               <folding>
                 <element signature="e#263#299639#0" expanded="false" />
                 <element signature="n#!!block;n#getEventsByMonth#0" expanded="false" />
                 <element signature="e#299860#302153#0" expanded="false" />
                 <element signature="n#!!block;n#getEventsByDate#0" expanded="false" />
-                <element signature="n#!!block;n#displayEvents#0" expanded="false" />
                 <element signature="n#!!block;n#clearTable#0" expanded="false" />
                 <element signature="n#!!block;n#fillupCallendar#0" expanded="false" />
                 <element signature="n#!!block;n#fillCalendarCell#0" expanded="false" />
@@ -63,17 +62,17 @@
                 <element signature="n#!!block;n#getDaysInMonth#0" expanded="false" />
                 <element signature="n#!!block;n#createLoader#0" expanded="false" />
                 <element signature="n#!!block;n#removeLoader#0" expanded="false" />
-                <element signature="e#311986#312714#0" expanded="false" />
+                <element signature="e#312213#312941#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contactScript.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contactScript.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/contactScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="493">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#loadPreviousComments#0" expanded="false" />
                 <element signature="n#!!block;n#displayComments#0" expanded="false" />
@@ -125,11 +124,11 @@
         <option value="$PROJECT_DIR$/script/_general.scss" />
         <option value="$PROJECT_DIR$/script/screen.scss" />
         <option value="$PROJECT_DIR$/script/script.js" />
-        <option value="$PROJECT_DIR$/pages/contact.html" />
+        <option value="$PROJECT_DIR$/script/contactScript.js" />
+        <option value="$PROJECT_DIR$/script/homescript.js" />
         <option value="$PROJECT_DIR$/dist/style/screen.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/script/homescript.js" />
-        <option value="$PROJECT_DIR$/script/contactScript.js" />
+        <option value="$PROJECT_DIR$/pages/contact.html" />
       </list>
     </option>
   </component>
@@ -140,7 +139,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="151" />
+    <option name="x" value="1899" />
     <option name="y" value="-8" />
     <option name="width" value="666" />
     <option name="height" value="700" />
@@ -197,8 +196,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,16 +241,18 @@
       <workItem from="1512299405965" duration="22788000" />
       <workItem from="1512382185949" duration="34050000" />
       <workItem from="1512654986298" duration="8540000" />
+      <workItem from="1512849144318" duration="609000" />
+      <workItem from="1512902281091" duration="1433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87321000" />
+    <option name="totallyTimeSpent" value="89363000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="1592" y="-8" width="1040" height="784" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21625" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33789062" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -283,6 +284,124 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="62" lean-forward="false" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="70" lean-forward="false" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/style/screen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="78" column="12" lean-forward="false" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/homescript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112812">
+          <caret line="6636" column="1" lean-forward="false" selection-start-line="6636" selection-start-column="1" selection-end-line="6636" selection-end-column="1" />
+          <folding>
+            <element signature="e#263#299639#0" expanded="false" />
+            <element signature="n#!!block;n#getEventsByMonth#0" expanded="false" />
+            <element signature="e#299860#302153#0" expanded="false" />
+            <element signature="n#!!block;n#getEventsByDate#0" expanded="false" />
+            <element signature="n#!!block;n#clearTable#0" expanded="false" />
+            <element signature="n#!!block;n#fillupCallendar#0" expanded="false" />
+            <element signature="n#!!block;n#fillCalendarCell#0" expanded="false" />
+            <element signature="n#!!block;n#arrowLeft#0" expanded="false" />
+            <element signature="n#!!block;n#arrowRight#0" expanded="false" />
+            <element signature="n#!!block;n#getDaysInMonth#0" expanded="false" />
+            <element signature="n#!!block;n#createLoader#0" expanded="false" />
+            <element signature="n#!!block;n#removeLoader#0" expanded="false" />
+            <element signature="e#312213#312941#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/contactScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#loadPreviousComments#0" expanded="false" />
+            <element signature="n#!!block;n#displayComments#0" expanded="false" />
+            <element signature="n#!!block;n#removeLoader#0" expanded="false" />
+            <element signature="e#2677#2933#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="62" lean-forward="false" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="70" lean-forward="false" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/style/screen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="78" column="12" lean-forward="false" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/homescript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112812">
+          <caret line="6636" column="1" lean-forward="true" selection-start-line="6636" selection-start-column="1" selection-end-line="6636" selection-end-column="1" />
+          <folding>
+            <element signature="e#263#299639#0" expanded="false" />
+            <element signature="n#!!block;n#getEventsByMonth#0" expanded="false" />
+            <element signature="e#299860#302153#0" expanded="false" />
+            <element signature="n#!!block;n#getEventsByDate#0" expanded="false" />
+            <element signature="n#!!block;n#clearTable#0" expanded="false" />
+            <element signature="n#!!block;n#fillupCallendar#0" expanded="false" />
+            <element signature="n#!!block;n#fillCalendarCell#0" expanded="false" />
+            <element signature="n#!!block;n#arrowLeft#0" expanded="false" />
+            <element signature="n#!!block;n#arrowRight#0" expanded="false" />
+            <element signature="n#!!block;n#getDaysInMonth#0" expanded="false" />
+            <element signature="n#!!block;n#createLoader#0" expanded="false" />
+            <element signature="n#!!block;n#removeLoader#0" expanded="false" />
+            <element signature="e#312213#312941#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/contactScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!block;n#loadPreviousComments#0" expanded="false" />
+            <element signature="n#!!block;n#displayComments#0" expanded="false" />
+            <element signature="n#!!block;n#removeLoader#0" expanded="false" />
+            <element signature="e#2677#2933#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
@@ -329,7 +448,6 @@
             <element signature="n#!!block;n#getEventsByMonth#0" expanded="false" />
             <element signature="e#299860#302153#0" expanded="false" />
             <element signature="n#!!block;n#getEventsByDate#0" expanded="false" />
-            <element signature="n#!!block;n#displayEvents#0" expanded="false" />
             <element signature="n#!!block;n#clearTable#0" expanded="false" />
             <element signature="n#!!block;n#fillupCallendar#0" expanded="false" />
             <element signature="n#!!block;n#fillCalendarCell#0" expanded="false" />
@@ -338,7 +456,7 @@
             <element signature="n#!!block;n#getDaysInMonth#0" expanded="false" />
             <element signature="n#!!block;n#createLoader#0" expanded="false" />
             <element signature="n#!!block;n#removeLoader#0" expanded="false" />
-            <element signature="e#311986#312714#0" expanded="false" />
+            <element signature="e#312213#312941#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -389,7 +507,6 @@
             <element signature="n#!!block;n#getEventsByMonth#0" expanded="false" />
             <element signature="e#299860#302153#0" expanded="false" />
             <element signature="n#!!block;n#getEventsByDate#0" expanded="false" />
-            <element signature="n#!!block;n#displayEvents#0" expanded="false" />
             <element signature="n#!!block;n#clearTable#0" expanded="false" />
             <element signature="n#!!block;n#fillupCallendar#0" expanded="false" />
             <element signature="n#!!block;n#fillCalendarCell#0" expanded="false" />
@@ -398,7 +515,7 @@
             <element signature="n#!!block;n#getDaysInMonth#0" expanded="false" />
             <element signature="n#!!block;n#createLoader#0" expanded="false" />
             <element signature="n#!!block;n#removeLoader#0" expanded="false" />
-            <element signature="e#311986#312714#0" expanded="false" />
+            <element signature="e#312213#312941#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -433,7 +550,6 @@
             <element signature="n#!!block;n#getEventsByMonth#0" expanded="false" />
             <element signature="e#299860#302153#0" expanded="false" />
             <element signature="n#!!block;n#getEventsByDate#0" expanded="false" />
-            <element signature="n#!!block;n#displayEvents#0" expanded="false" />
             <element signature="n#!!block;n#clearTable#0" expanded="false" />
             <element signature="n#!!block;n#fillupCallendar#0" expanded="false" />
             <element signature="n#!!block;n#fillCalendarCell#0" expanded="false" />
@@ -442,7 +558,7 @@
             <element signature="n#!!block;n#getDaysInMonth#0" expanded="false" />
             <element signature="n#!!block;n#createLoader#0" expanded="false" />
             <element signature="n#!!block;n#removeLoader#0" expanded="false" />
-            <element signature="e#311986#312714#0" expanded="false" />
+            <element signature="e#312213#312941#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -478,40 +594,28 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa3760.32895/caleandar.js" />
-    <entry file="file://$PROJECT_DIR$/dist/style/screen.css">
+    <entry file="file://$PROJECT_DIR$/script/contactScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="78" column="12" lean-forward="false" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="28" column="70" lean-forward="false" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="62" lean-forward="false" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
-          <folding />
+        <state relative-caret-position="493">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#loadPreviousComments#0" expanded="false" />
+            <element signature="n#!!block;n#displayComments#0" expanded="false" />
+            <element signature="n#!!block;n#removeLoader#0" expanded="false" />
+            <element signature="e#2677#2933#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/script/homescript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="6636" column="1" lean-forward="true" selection-start-line="6636" selection-start-column="1" selection-end-line="6636" selection-end-column="1" />
+        <state relative-caret-position="357">
+          <caret line="6464" column="40" lean-forward="false" selection-start-line="6464" selection-start-column="40" selection-end-line="6464" selection-end-column="40" />
           <folding>
             <element signature="e#263#299639#0" expanded="false" />
             <element signature="n#!!block;n#getEventsByMonth#0" expanded="false" />
             <element signature="e#299860#302153#0" expanded="false" />
             <element signature="n#!!block;n#getEventsByDate#0" expanded="false" />
-            <element signature="n#!!block;n#displayEvents#0" expanded="false" />
             <element signature="n#!!block;n#clearTable#0" expanded="false" />
             <element signature="n#!!block;n#fillupCallendar#0" expanded="false" />
             <element signature="n#!!block;n#fillCalendarCell#0" expanded="false" />
@@ -520,21 +624,32 @@
             <element signature="n#!!block;n#getDaysInMonth#0" expanded="false" />
             <element signature="n#!!block;n#createLoader#0" expanded="false" />
             <element signature="n#!!block;n#removeLoader#0" expanded="false" />
-            <element signature="e#311986#312714#0" expanded="false" />
+            <element signature="e#312213#312941#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/contactScript.js">
+    <entry file="file://$PROJECT_DIR$/dist/style/screen.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding>
-            <element signature="n#!!block;n#loadPreviousComments#0" expanded="false" />
-            <element signature="n#!!block;n#displayComments#0" expanded="false" />
-            <element signature="n#!!block;n#removeLoader#0" expanded="false" />
-            <element signature="e#2677#2933#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="184" column="16" lean-forward="true" selection-start-line="184" selection-start-column="16" selection-end-line="184" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="61" lean-forward="false" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

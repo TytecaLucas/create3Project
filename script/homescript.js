@@ -6457,6 +6457,13 @@ function displayEvents(events) {
             venueP.innerHTML = "Venue unknown";
         }
         div.append(venueP);
+
+        var link = document.createElement('a');
+        link.href = currentEvent.url;
+        link.target = "_blank";
+        link.innerHTML = "Buy tickets!";
+        link.classList.add("buyTicket");
+        div.append(link);
     }
     if(holder.innerHTML == ""){
         var noEventsFound = document.createElement('p');
